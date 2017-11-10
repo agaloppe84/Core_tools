@@ -1,10 +1,54 @@
-// Define variables for your color scheme
-
-// For example:
+// Base colors
 $red: #EE5F5B;
 $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
-$green: #32B796;
-$gray: #000000;
+$true-green: #04E762;
+$gray: rgb(50,50,60);
 $light-gray: #F4F4F4;
+
+
+// Colors
+$base:    $gray;
+$primary: $blue;
+$success: $true-green;
+$info:    $yellow;
+$danger:  $red;
+$warning: $orange;
+$colors: ("base": $base, "primary": $primary, "success": $success, "info": $info, "danger": $danger, "warning": $warning);
+
+
+$gray-shade-1: lighten($gray, 10%);
+$gray-shade-2: lighten($gray, 20%);
+$gray-shade-3: lighten($gray, 30%);
+$gray-shade-4: lighten($gray, 40%);
+$gray-shade-5: lighten($gray, 50%);
+$gray-shade-6: lighten($gray, 60%);
+$gray-shade-7: lighten($gray, 70%);
+
+
+@for $i from 1 through 7 {
+  .circle-gray-#{$i} {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lighten($gray, $i * 10);
+  }
+}
+
+@for $i from 1 through 7 {
+  .circle-red-#{$i} {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lighten($red, $i * 10);
+  }
+}
+
+@for $i from 1 through 7 {
+  .text-shade-#{$i} {
+    color: lighten($gray, $i * 10);
+  }
+}
+
+

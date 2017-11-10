@@ -1,0 +1,23 @@
+$banner-height: 60vh;
+$banner-size-behaviour: cover;
+
+
+.banner {
+  width: 100%;
+  height: $banner-height;
+  background-color: $gray-shade-6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .banner-content {
+    display: flex;
+    border: 2px dashed $gray-shade-7;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .item {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+$dropdown-carret-size: 6px;
+$dropdown-bottom-gap: $dropdown-carret-size * 2;
+$dropdown-border-radius: 3px;
+$dropdown-background: $gray-shade-7;
+$dropdown-padding: 20px;
+$dropdown-menu-width: 180px;
+$center-algo: $dropdown-menu-width + ($dropdown-padding * 2);
+$position-to-center: -#{$center-algo / 2};
+
+%carret-top {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: $dropdown-background;
+  border-width: $dropdown-carret-size;
+  margin-left: -$dropdown-carret-size;
+  opacity: 0;
+}
+%carret-bottom {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: $dropdown-background;
+  border-width: $dropdown-carret-size;
+  margin-left: -$dropdown-carret-size;
+  opacity: 0;
+}
+
+%dropdown-menu {
+  width: $dropdown-menu-width;
+  padding: $dropdown-padding;
+  position: absolute;
+  border-radius: $dropdown-border-radius;
+  background-color: $dropdown-background;
+  opacity: 0;
+  z-index: 1;
+}
+
+%dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bolder;
+  font-size: 15px;
+  height: 25px;
+  color: $gray-shade-1;
+}
+
+%dropdown-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  height: 25px;
+  color: $gray-shade-3;
+}
+
+.dropdown {
+  &-top {
+    position: relative;
+    display: inline-block;
+    .dropdown-menu {
+      &-header {
+        @extend %dropdown-header;
+      }
+      &-item {
+        @extend %dropdown-item;
+      }
+      &.active {
+        opacity: 1;
+      }
+      @extend %dropdown-menu;
+      top: calc(100% + #{$dropdown-bottom-gap});
+      left: 0;
+      &.center {
+        left: calc(#{$position-to-center} + 50%);
+      }
+      &.right {
+        right: 0;
+        left: inherit;
+      }
+    }
+    &:after {
+      @extend %carret-top;
+    }
+    .dropdown-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+    }
+  }
+  &-bottom {
+    position: relative;
+    display: inline-block;
+    .dropdown-menu {
+      &-header {
+        @extend %dropdown-header;
+      }
+      &-item {
+        @extend %dropdown-item;
+      }
+      &.active {
+        opacity: 1;
+      }
+      @extend %dropdown-menu;
+      bottom: calc(100% + #{$dropdown-bottom-gap});
+      left: 0;
+      &.center {
+        left: calc(#{$position-to-center} + 50%);
+      }
+      &.right {
+        right: 0;
+        left: inherit;
+      }
+    }
+    .dropdown-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+    }
+    &:after {
+      @extend %carret-bottom;
+    }
+  }
+}
+
+.dropdown-top.active:after {
+  opacity: 1;
+}
+.dropdown-bottom.active:after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.link {
+  color: $gray-shade-1;
+  cursor: pointer;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.link--arrowed {
+  &.reversed {
+    &:hover {
+      .arrow-icon {
+        transform: rotate(90deg);
+      }
+      .arrow-icon--circle {
+        stroke-dashoffset: 95;
+      }
+    }
+    &.active {
+      .arrow-icon {
+        transform: rotate(90deg);
+        g {
+          stroke: $true-green;
+        }
+      }
+      .arrow-icon--circle {
+        stroke-dashoffset: 95;
+      }
+    }
+  }
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    transition: transform 0.5s ease;
+    vertical-align: middle;
+    margin-left: 8px;
+    g {
+      stroke: $gray-shade-5;
+    }
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
+
+  &:hover {
+    .arrow-icon {
+      transform: rotate(-90deg);
+    }
+    .arrow-icon--circle {
+      stroke-dashoffset: 95;
+    }
+  }
+  &.active {
+    .arrow-icon {
+      transform: rotate(-90deg);
+      g {
+        stroke: $true-green;
+      }
+    }
+    .arrow-icon--circle {
+      stroke-dashoffset: 95;
+    }
+  }
+}

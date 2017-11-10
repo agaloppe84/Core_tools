@@ -1,0 +1,203 @@
+$tooltip-carret-size: 6px;
+$tooltip-bottom-gap: $tooltip-carret-size * 2;
+$tooltip-border-radius: 50px;
+$tooltip-background: $gray-shade-7;
+$tooltip-menu-width: 140px;
+$tooltip-height: 30px;
+
+%transition {
+  transition: 0.3s ease;
+}
+
+%carret-top {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+  @extend %transition;
+}
+%carret-bottom {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+  @extend %transition;
+}
+%carret-left {
+  bottom: 3px;
+  right: calc(100% + 5px);
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-left-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+  @extend %transition;
+}
+%carret-right {
+  bottom: 3px;
+  left: calc(100% + 11px);
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-right-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+  @extend %transition;
+}
+
+%tooltip-menu {
+  height: $tooltip-height;
+  position: absolute;
+  border-radius: $tooltip-border-radius;
+  background-color: $tooltip-background;
+  opacity: 0;
+  z-index: 1;
+  width: $tooltip-menu-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 13px;
+  @extend %transition;
+}
+
+
+.tooltip {
+  &-top {
+    position: relative;
+    display: inline-block;
+    .tooltip-menu {
+      @extend %tooltip-menu;
+      top: calc(100% + #{$tooltip-bottom-gap});
+      left: 0;
+      &.center {
+        left: calc(#{-$tooltip-menu-width / 2} + 50%);
+      }
+      &.right {
+        right: 0;
+        left: inherit;
+      }
+    }
+    &:after {
+      @extend %carret-top;
+    }
+    .tooltip-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+      &:hover + .tooltip-menu {
+        opacity: 1;
+      }
+    }
+  }
+  &-bottom {
+    position: relative;
+    display: inline-block;
+    .tooltip-menu {
+      @extend %tooltip-menu;
+      bottom: calc(100% + #{$tooltip-bottom-gap});
+      left: 0;
+      &.center {
+        left: calc(#{-$tooltip-menu-width / 2} + 50%);
+      }
+      &.right {
+        right: 0;
+        left: inherit;
+      }
+    }
+    .tooltip-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+      &:hover + .tooltip-menu {
+        opacity: 1;
+      }
+    }
+    &:after {
+      @extend %carret-bottom;
+    }
+  }
+  &-left {
+    position: relative;
+    display: inline-block;
+    .tooltip-menu {
+      @extend %tooltip-menu;
+      right: calc(100% + 16px);
+      bottom: calc(50% - #{$tooltip-height / 2});
+    }
+    .tooltip-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+      &:hover + .tooltip-menu {
+        opacity: 1;
+      }
+    }
+    &:after {
+      @extend %carret-left;
+    }
+  }
+  &-right {
+    position: relative;
+    display: inline-block;
+    .tooltip-menu {
+      @extend %tooltip-menu;
+      left: calc(100% + 16px);
+      bottom: calc(50% - #{$tooltip-height / 2});
+    }
+    .tooltip-trigger {
+      font-weight: bolder;
+      color: $gray-shade-1;
+      display: inline-block;
+      &:hover + .tooltip-menu {
+        opacity: 1;
+      }
+    }
+    &:after {
+      @extend %carret-right;
+    }
+  }
+}
+
+.tooltip-top.active:after {
+  opacity: 1;
+}
+.tooltip-bottom.active:after {
+  opacity: 1;
+}
+.tooltip-left.active:after {
+  opacity: 1;
+}
+.tooltip-right.active:after {
+  opacity: 1;
+}
+

@@ -1,0 +1,40 @@
+// Links placeholders
+%no-decoration {
+  text-decoration: none;
+}
+
+
+// Transition placeholders
+%transition {
+  transition: 0.2s ease;
+}
+
+
+// Flexbox placeholders
+%flexbox {
+  display: flex;
+  align-items: center;
+}
+%jc-center {
+  justify-content: center;
+}
+%jc-start {
+  justify-content: flex-start;
+}
+%jc-end {
+  justify-content: flex-end;
+}
+%flex-column {
+  flex-direction: column;
+}
+%flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+// Images placeholders
+%img-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

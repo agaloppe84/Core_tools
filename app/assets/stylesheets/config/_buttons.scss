@@ -1,0 +1,103 @@
+// Buttons variables
+$button-normal-class-name: "btn";
+$button-bordered-class-name: "btn-bordered";
+$button-full-size-class-name: "btn-full";
+$button-fixed-class-name: "btn-fixed";
+$button-border-width: 1px;
+$buttons-border-radius: 3px;
+$buttons-font-size: 14px;
+$buttons-full-font-size: 14px;
+$button-fixed-width: 100px;
+
+
+
+
+// Paddings
+$button-padding-top: 8px;
+$button-padding-left: 16px;
+$button-bordered-padding-top: $button-padding-top - $button-border-width;
+$button-bordered-padding-left: $button-padding-left - $button-border-width;
+
+
+// Button mixins
+@mixin button($text-color, $background-color) {
+  background-color: $background-color;
+  color: $text-color;
+  text-decoration: none;
+  padding: $button-padding-top $button-padding-left;
+  border-radius: $buttons-border-radius;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: $buttons-font-size;
+  cursor: pointer;
+  text-align: center;
+}
+@mixin button-fixed($text-color, $background-color) {
+  background-color: $background-color;
+  color: $text-color;
+  width: $button-fixed-width;
+  text-decoration: none;
+  padding: $button-padding-top $button-padding-left;
+  border-radius: $buttons-border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: $buttons-font-size;
+  cursor: pointer;
+}
+@mixin button-bordered($text-color, $background-color, $border) {
+  background-color: $background-color;
+  color: $text-color;
+  text-decoration: none;
+  padding: $button-bordered-padding-top $button-bordered-padding-left;
+  border: $border solid $text-color;
+  border-radius: $buttons-border-radius;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: $buttons-font-size;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+// Button styles
+@each $name, $color in $colors {
+  .#{$button-full-size-class-name}-#{$name} {
+    @include button(white, $color);
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $buttons-full-font-size;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .#{$button-normal-class-name}-#{$name} {
+    @include button(white, $color);
+    @extend %transition;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .#{$button-bordered-class-name}-#{$name} {
+    @include button-bordered($color, transparent, $button-border-width);
+    @extend %transition;
+    &:hover {
+      opacity: 0.8;
+      @include button(white, $color);
+      padding: $button-bordered-padding-top $button-bordered-padding-left;
+    }
+  }
+  .#{$button-fixed-class-name}-#{$name} {
+    @include button-fixed(white, $color);
+    @extend %transition;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+

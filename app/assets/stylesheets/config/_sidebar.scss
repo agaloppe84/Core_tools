@@ -1,0 +1,97 @@
+$sidebar-width: 250px;
+$sidebar-background: $gray-shade-7;
+$transition: 0.8s;
+$navbar-height: 50px;
+
+
+
+@mixin sidebar($width, $background, $position) {
+  width: $width;
+  transition: $transition;
+  position: fixed;
+  z-index: 2;
+  height: calc(100vh - #{$navbar-height});
+  background-color: $background;
+  display: flex;
+  overflow-y: scroll;
+  top: $navbar-height;
+  flex-direction: column;
+  @if ($position == "left") {
+    left: -$width;
+  }
+  @if ($position == "right") {
+    right: -$width;
+  }
+}
+
+
+.sidebar {
+  &-left {
+    @include sidebar($sidebar-width, $sidebar-background, "left");
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  }
+  &-right {
+    @include sidebar($sidebar-width, $sidebar-background, "right");
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  }
+  &-trigger {
+    display: inline-block;
+  }
+}
+
+
+.sidebar-left-animation {
+  left: 0;
+}
+.sidebar-right-animation {
+  right: 0;
+}
+
+
+
+.sidebar-close {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  width: 30px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.close-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+}
+.close-icon:hover {
+  opacity: 1;
+}
+.close-icon:before, .close-icon:after {
+  position: absolute;
+  content: ' ';
+  height: 100%;
+  left: 50%;
+  width: 2px;
+  background-color: $gray-shade-7;
+}
+.close-icon:before {
+  transform: rotate(45deg);
+}
+.close-icon:after {
+  transform: rotate(-45deg);
+}
+

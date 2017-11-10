@@ -1,0 +1,40 @@
+$viewer-height: 6px;
+$bar-viewer-background-color: $gray-shade-2;
+$viewer-background-color: lighten($bar-viewer-background-color, 30%);
+$navbar-height-offset: 50px;
+
+
+.fixed-box {
+  position: sticky;
+  top: $navbar-height-offset;
+  left: 0;
+  z-index: 1;
+  .position-viewer {
+    display: flex;
+    width: 100%;
+    height: $viewer-height;
+    background-color: $viewer-background-color;
+    .bar {
+      position: relative;
+      height: 100%;
+      background-color: $bar-viewer-background-color;
+      .percents {
+        height: 100%;
+        background-color: $bar-viewer-background-color;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        font-weight: bolder;
+        letter-spacing: -0.5px;
+        color: $red;
+        font-size: 7px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}

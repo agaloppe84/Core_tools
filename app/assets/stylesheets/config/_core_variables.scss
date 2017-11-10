@@ -1,0 +1,149 @@
+// Width breakpoints
+$screen-breakpoints: ("xs": "0px", "sm": "768px", "md": "900px", "lg": "1200px");
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-family: $body-font;
+  font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: $headers-font;
+  color: rgb(100,100,110);
+  margin: 0;
+}
+p {
+  font-weight: 400;
+  font-family: $paragraphs-font;
+  color: $gray-shade-2;
+  margin: 0;
+}
+a {
+  @extend %no-decoration;
+  font-family: $links-font;
+}
+
+
+// Flexbox utilities classes
+.flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jc-start {
+  justify-content: flex-start;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-end {
+  justify-content: flex-end;
+}
+.jc-around {
+  justify-content: space-around;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.ai-start {
+  align-items: flex-start;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-end {
+  align-items: flex-end;
+}
+.ai-stretch {
+  align-items: stretch;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.ac-start {
+  align-content: flex-start;
+}
+.ac-center {
+  align-content: center;
+}
+.ac-end {
+  align-content: flex-end;
+}
+
+
+
+// CORE - DISPLAY UTILITIES //
+.d-invisible {
+  visibility: hidden;
+}
+.d-visible {
+  visibility: visible;
+}
+.d-hidden {
+  display: none;
+}
+.d-inline {
+  display: inline-block;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex !important;
+}
+@each $width, $pixels in $screen-breakpoints {
+  @media (max-width: $pixels) {
+    .d-hidden-#{$width} {
+      display: none;
+    }
+  }
+}
+
+// Position utilities
+.p-rel {
+  position: relative !important;
+}
+.p-abs {
+  position: absolute !important;
+}
+.p-fix {
+  position: fixed !important;
+}
+.p-sti {
+  position: sticky !important;
+}
+
+
+// Container utilities
+.buttons-container {
+  @extend %flexbox;
+  @extend %jc-start;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+
+
+// Margins utilities
+.sm-sides-margins {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.md-sides-margins {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.lg-sides-margins {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+  .d-hidden-xs {
+    display: none;
+  }
+}

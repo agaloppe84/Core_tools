@@ -1,11 +1,21 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
-@import "config/bootstrap_variables";
+@import "config/placeholders";
+@import "config/core_variables";
+@import "config/sidebar";
+@import "config/flexgrid";
+@import "config/buttons";
+@import "config/navbars";
+@import "config/banners";
+@import "config/exemples_utilities";
+@import "config/tabulations";
+@import "config/tooltips";
+@import "config/dropdowns";
+@import "config/position_viewer";
+@import "config/modals";
 
 // External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
