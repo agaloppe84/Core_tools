@@ -14,6 +14,24 @@ carousels.forEach((carousel) => {
     urlsArray.push(photoUrl);
     titlesArray.push(photoTitle);
   });
+
+
+  if (carousel.dataset.auto == "true") {
+    setInterval(() => {
+      if (index < urlsArray.length - 1) {
+        index += 1;
+      } else if (index >= urlsArray.length - 1) {
+        index = 0;
+      }
+      carousel.style.backgroundImage = "url(" + urlsArray[index] + ")";
+      let carouselText = carousel.querySelector(".carousel-text");
+      carouselText.innerText = titlesArray[index];
+    }, 5000);
+  }
+
+
+
+
   nextButton.addEventListener("click", (event) => {
     if (index < urlsArray.length - 1) {
       index += 1;
@@ -23,8 +41,6 @@ carousels.forEach((carousel) => {
     carousel.style.backgroundImage = "url(" + urlsArray[index] + ")";
     let carouselText = carousel.querySelector(".carousel-text");
     carouselText.innerText = titlesArray[index];
-    console.log(index);
-    console.log(urlsArray.length - 1);
   });
   previousButton.addEventListener("click", (event) => {
     if (index <= urlsArray.length - 1 && index > 0) {
