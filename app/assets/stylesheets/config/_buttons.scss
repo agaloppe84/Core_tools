@@ -19,6 +19,12 @@ $button-bordered-padding-top: $button-padding-top - $button-border-width;
 $button-bordered-padding-left: $button-padding-left - $button-border-width;
 
 
+input[type="submit"] {
+  border: none;
+}
+
+
+
 // Button mixins
 @mixin button($text-color, $background-color) {
   background-color: $background-color;

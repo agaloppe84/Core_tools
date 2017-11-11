@@ -4,11 +4,19 @@ $viewer-background-color: lighten($bar-viewer-background-color, 30%);
 $navbar-height-offset: 50px;
 
 
+
+
+
+
+
+
+
+
 .fixed-box {
   position: sticky;
   top: $navbar-height-offset;
   left: 0;
-  z-index: 1;
+  z-index: 6;
   .position-viewer {
     display: flex;
     width: 100%;
@@ -29,7 +37,7 @@ $navbar-height-offset: 50px;
         border-bottom-right-radius: 2px;
         font-weight: bolder;
         letter-spacing: -0.5px;
-        color: $red;
+        color: $bar-viewer-background-color;
         font-size: 7px;
         position: absolute;
         right: 0;

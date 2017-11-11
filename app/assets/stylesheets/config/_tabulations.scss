@@ -1,5 +1,5 @@
-$tab-link-color: $gray-shade-5;
-$tab-link-hover-color: $gray-shade-1;
+$tab-link-color: $gray-shade-3;
+$tab-link-hover-color: $true-green;
 $border-on-hover: true;
 
 
@@ -19,7 +19,7 @@ $border-on-hover: true;
           bottom: -10px;
           width: 100%;
           left: 0;
-          border-top: 2px solid $gray-shade-4;
+          border-top: 2px solid $tab-link-hover-color;
         }
       }
     }

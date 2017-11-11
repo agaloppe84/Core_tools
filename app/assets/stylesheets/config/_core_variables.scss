@@ -19,6 +19,8 @@ p {
   font-family: $paragraphs-font;
   color: $gray-shade-2;
   margin: 0;
+  line-height: 1.7;
+  font-size: 14px;
 }
 a {
   @extend %no-decoration;
@@ -113,6 +115,7 @@ a {
 }
 .p-sti {
   position: sticky !important;
+  top: 56px;
 }
 
 
