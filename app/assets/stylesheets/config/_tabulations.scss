@@ -6,8 +6,9 @@ $border-on-hover: true;
 .tab {
   &-trigger {
     color: $tab-link-color;
-    font-weight: 400;
+    font-weight: bolder;
     margin: 0 10px;
+    font-size: 14px;
     &.active {
       color: $tab-link-hover-color;
       font-weight: bolder;
@@ -16,7 +17,7 @@ $border-on-hover: true;
         &:before {
           content: '';
           position: absolute;
-          bottom: -10px;
+          bottom: -7px;
           width: 100%;
           left: 0;
           border-top: 2px solid $tab-link-hover-color;
@@ -37,15 +38,16 @@ $border-on-hover: true;
 
 
 .tabs-links {
-  height: 50px;
+  height: 60px;
+  box-sizing: border-box;
   display: flex;
-  margin-bottom: 10px;
   align-items: center;
   &.center {
     justify-content: center;
   }
   &.start {
     justify-content: flex-start;
+    padding-left: 20px;
   }
 }
 

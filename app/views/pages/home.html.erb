@@ -7,7 +7,9 @@
       <p>Some cool stuff here</p>
     </div>
     <div class="item">
-      <div class="btn-primary">call to action</div>
+      <%= link_to mobile_path do %>
+        <div class="btn-primary">Mobile version</div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -15,424 +17,215 @@
 
 
 
-<%= render "shared/components/position_viewer" %>
+<%= render "shared/examples/position_viewer" %>
 
-<%= render "shared/components/buttons" %>
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Buttons</h3>
+    </div>
+  </div>
 
-<%= render "shared/components/grayscale" %>
+  <div class="tabs-links start" data-target="buttons-tabs">
+    <div class="tab-trigger active" data-target="buttons-examples">Examples</div>
+    <div class="tab-trigger" data-target="buttons-code">Code</div>
+    <div class="tab-trigger" data-target="buttons-doc">Documentation</div>
+  </div>
 
-<%= render "shared/components/sidebars" %>
-
-<%= render "shared/components/tabulations" %>
-
+  <div class="tabs-container" id="buttons-tabs">
+    <div class="tab-content active" id="buttons-examples">
+      <%= render "shared/examples/buttons" %>
+    </div>
+    <div class="tab-content" id="buttons-code">
+      <%= render "shared/code/buttons" %>
+    </div>
+    <div class="tab-content" id="buttons-doc">
+      <%= render "shared/examples/buttons" %>
+    </div>
+  </div>
+</div>
 
 
 
 <div class="section white">
-
-  <div class="header">
-    <h2 class="text-shade-1">Dropdowns</h2>
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Grayscale</h3>
+    </div>
   </div>
 
-
-  <div class="tabs-links" data-target="dropdown-tabs">
-    <div class="tab-trigger active" data-target="drop-tab-1">Examples</div>
-    <div class="tab-trigger" data-target="drop-tab-2">Code</div>
-    <div class="tab-trigger" data-target="drop-tab-3">Documentation</div>
+  <div class="tabs-links start" data-target="grayscale-tabs">
+    <div class="tab-trigger active" data-target="grayscale-examples">Examples</div>
+    <div class="tab-trigger" data-target="grayscale-code">Code</div>
+    <div class="tab-trigger" data-target="grayscale-doc">Documentation</div>
   </div>
 
-  <div class="tabs-container" id="dropdown-tabs">
-
-    <div class="tab-content active" id="drop-tab-1">
-      <div class="sub-header">
-        <h4 class="text-shade-4">Top position</h4>
-      </div>
-
-      <div class="inline-container">
-
-        <div class="item">
-          <div class="dropdown-top">
-
-            <div class="dropdown-trigger" data-target="drop-1">
-              <div class="link link--arrowed reversed">Top left
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu" id="drop-1">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="dropdown-top">
-
-            <div class="dropdown-trigger" data-target="drop-2">
-              <div class="link link--arrowed reversed">Top center
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu center" id="drop-2">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="dropdown-top">
-
-            <div class="dropdown-trigger" data-target="drop-3">
-              <div class="link link--arrowed reversed">Top right
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu right" id="drop-3">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-      <div class="sub-header">
-        <h4 class="text-shade-4">Bottom position</h4>
-      </div>
-
-      <div class="inline-container">
-
-        <div class="item">
-          <div class="dropdown-bottom">
-
-            <div class="dropdown-trigger" data-target="drop-4">
-              <div class="link link--arrowed">Under left
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu" id="drop-4">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="dropdown-bottom">
-
-            <div class="dropdown-trigger" data-target="drop-5">
-              <div class="link link--arrowed">Under center
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu center" id="drop-5">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="dropdown-bottom">
-
-            <div class="dropdown-trigger" data-target="drop-6">
-              <div class="link link--arrowed">Under right
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" class="arrow-icon d-hidden-xs">
-                  <g fill="none" stroke="#2175FF" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle cx="16" cy="16" r="15.12" class="arrow-icon--circle"></circle>
-                    <path d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98" class="arrow-icon--arrow"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-
-            <div class="dropdown-menu right" id="drop-6">
-              <div class="dropdown-menu-header">Menu header</div>
-              <div class="dropdown-menu-item">Menu item</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+  <div class="tabs-container" id="grayscale-tabs">
+    <div class="tab-content active" id="grayscale-examples">
+      <%= render "shared/examples/grayscale" %>
     </div>
-
-    <div class="tab-content" id="drop-tab-2">
-
-
-      <h4><span class="text-shade-green-0">HTML </span> Dropdown bottom</h4>
-      <pre style="text-shadow: none;">
-        <code class="language-markup" style="text-shadow: none;background-color: transparent;margin: 0;">
-
-          &ltdiv class="dropdown-bottom"&gt
-            &ltdiv class="dropdown-trigger" data-target="drop-6"&gt
-              &lth3&gtlink&lt/h3&gt
-            &lt/div&gt
-            &ltdiv class="dropdown-menu right" id="drop-6"&gt
-              &ltdiv class="dropdown-menu-header"&gtMenu header&lt/div&gt
-              &ltdiv class="dropdown-menu-item"&gtMenu item&lt/div&gt
-            &lt/div&gt
-          &lt/div&gt
-        </code>
-      </pre>
-
-
+    <div class="tab-content" id="grayscale-code">
+      <%= render "shared/code/grayscale" %>
     </div>
-
-    <div class="tab-content" id="drop-tab-3">
-      <h2>Test</h2>
+    <div class="tab-content" id="grayscale-doc">
+      <%= render "shared/examples/grayscale" %>
     </div>
-
   </div>
-
-
 </div>
+
+
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Sidebars</h3>
+    </div>
+  </div>
+
+  <div class="tabs-links start" data-target="sidebars-tabs">
+    <div class="tab-trigger active" data-target="sidebars-examples">Examples</div>
+    <div class="tab-trigger" data-target="sidebars-code">Code</div>
+    <div class="tab-trigger" data-target="sidebars-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="sidebars-tabs">
+    <div class="tab-content active" id="sidebars-examples">
+      <%= render "shared/examples/sidebars" %>
+    </div>
+    <div class="tab-content" id="sidebars-code">
+      <%= render "shared/code/sidebars" %>
+    </div>
+    <div class="tab-content" id="sidebars-doc">
+      <%= render "shared/examples/sidebars" %>
+    </div>
+  </div>
+</div>
+
+
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Tabulations</h3>
+    </div>
+  </div>
+
+  <div class="tabs-links start" data-target="tabulations-tabs">
+    <div class="tab-trigger active" data-target="tabulations-examples">Examples</div>
+    <div class="tab-trigger" data-target="tabulations-code">Code</div>
+    <div class="tab-trigger" data-target="tabulations-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="tabulations-tabs">
+    <div class="tab-content active" id="tabulations-examples">
+      <%= render "shared/examples/tabulations" %>
+    </div>
+    <div class="tab-content" id="tabulations-code">
+      <%= render "shared/code/tabulations" %>
+    </div>
+    <div class="tab-content" id="tabulations-doc">
+      <%= render "shared/examples/tabulations" %>
+    </div>
+  </div>
+</div>
+
+
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Dropdowns</h3>
+    </div>
+  </div>
+
+  <div class="tabs-links start" data-target="dropdowns-tabs">
+    <div class="tab-trigger active" data-target="dropdowns-examples">Examples</div>
+    <div class="tab-trigger" data-target="dropdowns-code">Code</div>
+    <div class="tab-trigger" data-target="dropdowns-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="dropdowns-tabs">
+    <div class="tab-content active" id="dropdowns-examples">
+      <%= render "shared/examples/dropdowns" %>
+    </div>
+    <div class="tab-content" id="dropdowns-code">
+      <%= render "shared/code/dropdowns" %>
+    </div>
+    <div class="tab-content" id="dropdowns-doc">
+      <%= render "shared/examples/dropdowns" %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Modals</h3>
+    </div>
+  </div>
+
+  <div class="tabs-links start" data-target="modals-tabs">
+    <div class="tab-trigger active" data-target="modals-examples">Examples</div>
+    <div class="tab-trigger" data-target="modals-code">Code</div>
+    <div class="tab-trigger" data-target="modals-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="modals-tabs">
+    <div class="tab-content active" id="modals-examples">
+      <%= render "shared/examples/modals" %>
+    </div>
+    <div class="tab-content" id="modals-code">
+      <%= render "shared/code/modals" %>
+    </div>
+    <div class="tab-content" id="modals-doc">
+      <%= render "shared/examples/modals" %>
+    </div>
+  </div>
+</div>
+
 
 
 
 
 
 <div class="section white">
-
-  <div class="header">
-    <h2 class="text-shade-1">Modals</h2>
-  </div>
-
-  <div class="sub-header">
-    <h4 class="text-shade-4">Normal position</h4>
-  </div>
-
-  <div class="inline-container">
-
-    <div class="item">
-
-
-        <div class="modal">
-          <div class="modal-trigger">Modal only body</div>
-
-          <div class="modal-reference">
-            <div class="modal-content">
-              <div class="modal-close"><div class="close-icon"></div></div>
-              <div class="content-body-alone">
-                modal body
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-    </div>
-
-    <div class="item">
-      <div class="modal">
-        <div class="modal-trigger">Modal normal</div>
-        <div class="modal-content">
-          <div class="modal-close"><div class="close-icon"></div></div>
-          <div class="content-header">modal header 2</div>
-          <div class="content-body">modal body 2</div>
-          <div class="content-footer">
-            <div class="btn-primary">Save changes</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="sub-header">
-    <h4 class="text-shade-4">Bottom position (Mobile)</h4>
-  </div>
-
-  <div class="inline-container">
-    <div class="item">
-      <div class="modal-bottom">
-        <div class="modal-bottom-trigger">Modal only body (mobile)</div>
-        <div class="modal-bottom-content">
-          <div class="modal-bottom-close"><div class="close-icon"></div></div>
-          <div class="content-body-alone">
-            <div class="modal-resize">Resize</div>
-            <h4>modal body bottom</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem sapiente, deserunt ratione repudiandae laudantium odit, modi ut quidem? Enim modi pariatur vitae, laboriosam molestiae sequi officiis at rerum tempore vero?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="modal-bottom">
-        <div class="modal-bottom-trigger">Modal normal (mobile)</div>
-        <div class="modal-bottom-content">
-          <div class="modal-bottom-close"><div class="close-icon"></div></div>
-          <div class="content-body">modal body bottom</div>
-          <div class="content-footer">
-            <div class="btn-base modal-resize">Resize</div>
-            <div class="btn-primary">Save changes</div>
-          </div>
-        </div>
-      </div>
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Search filter</h3>
     </div>
   </div>
 
+  <div class="tabs-links start" data-target="searchfilter-tabs">
+    <div class="tab-trigger active" data-target="searchfilter-examples">Examples</div>
+    <div class="tab-trigger" data-target="searchfilter-code">Code</div>
+    <div class="tab-trigger" data-target="searchfilter-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="searchfilter-tabs">
+    <div class="tab-content active" id="searchfilter-examples">
+      <%= render "shared/examples/search_filter" %>
+    </div>
+    <div class="tab-content" id="searchfilter-code">
+      <%= render "shared/code/search_filter" %>
+    </div>
+    <div class="tab-content" id="searchfilter-doc">
+      <%= render "shared/code/search_filter" %>
+    </div>
+  </div>
 </div>
-
-
-
-<div class="section white">
-
-  <div class="header">
-    <h2 class="text-shade-1">Tooltips</h2>
-  </div>
-
-  <div class="sub-header">
-    <h4 class="text-shade-4">Vertical positions</h4>
-  </div>
-
-  <div class="inline-container">
-
-    <div class="item">
-      <div class="tooltip-bottom" id="tool-1">
-        <div class="tooltip-trigger" data-target="tool-1">tooltip bottom</div>
-        <div class="tooltip-menu center">
-          <div class="text-shade-1">tooltip content</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="tooltip-top" id="tool-3">
-        <div class="tooltip-trigger" data-target="tool-3">tooltip top</div>
-        <div class="tooltip-menu center">
-          <div class="text-shade-1">tooltip content</div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-  <div class="sub-header">
-    <h4 class="text-shade-4">Horizontal positions</h4>
-  </div>
-
-  <div class="inline-container">
-
-    <div class="item">
-      <div class="tooltip-left" id="tool-4">
-        <div class="tooltip-trigger" data-target="tool-4">tooltip left</div>
-        <div class="tooltip-menu">
-          <div class="text-shade-1">tooltip content</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="tooltip-right" id="tool-5">
-        <div class="tooltip-trigger" data-target="tool-5">tooltip right</div>
-        <div class="tooltip-menu">
-          <div class="text-shade-1">tooltip content</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-
-
-
-
-<div class="section white">
-
-  <div class="header">
-    <h2 class="text-shade-1">Search filter</h2>
-  </div>
-
-  <div class="header">
-    <div class="input-demo-container">
-      <input type="text" id="input-filter" placeholder="Red, blue or yellow ?" class="input-hippie-style">
-    </div>
-  </div>
-
-  <div class="sub-header">
-    <div class="text-shade-green-0" id="filter-result-count">No filter</div>
-  </div>
-
-  <div class="container-flexrow" data-gap="20px">
-
-    <div class="flexrow" data-wrap="left">
-
-      <div class="flexcol-xs-12 flexcol-sm-6 flexcol-md-4 search-filter" data-filter="red">
-        <div class="flexcol-gap">
-          <div class="search-item">
-            <div class="text-shade-2">Red box</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flexcol-xs-12 flexcol-sm-6 flexcol-md-4 search-filter" data-filter="blue">
-        <div class="flexcol-gap">
-          <div class="search-item">
-            <div class="text-shade-2">Blue box</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flexcol-xs-12 flexcol-sm-6 flexcol-md-4 search-filter" data-filter="red">
-        <div class="flexcol-gap">
-          <div class="search-item">
-            <div class="text-shade-2">Red box</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flexcol-xs-12 flexcol-sm-6 flexcol-md-4 search-filter" data-filter="yellow">
-        <div class="flexcol-gap">
-          <div class="search-item">
-            <div class="text-shade-2">Yellow box</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
 
 
 
@@ -441,168 +234,65 @@
 
 
 <div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Scrollspys</h3>
+    </div>
+  </div>
 
-  <form action="" class="inline-container">
-    <input type="text" placeholder="Firstname" class="input-classic-style">
-    <input type="text" placeholder="Firstname" class="input-new-style">
-    <input type="text" placeholder="Firstname" class="input-old-style">
-    <input type="text" placeholder="Firstname" class="input-hippie-style">
-    <input type="submit" value="submit" class="btn-base">
-  </form>
+  <div class="tabs-links start" data-target="scrollspys-tabs">
+    <div class="tab-trigger active" data-target="scrollspys-examples">Examples</div>
+    <div class="tab-trigger" data-target="scrollspys-code">Code</div>
+    <div class="tab-trigger" data-target="scrollspys-doc">Documentation</div>
+  </div>
 
+  <div class="tabs-container" id="scrollspys-tabs">
+    <div class="tab-content active" id="scrollspys-examples">
+      <%= render "shared/examples/scrollspys" %>
+    </div>
+    <div class="tab-content" id="scrollspys-code">
+      <%= render "shared/code/scrollspys" %>
+    </div>
+    <div class="tab-content" id="scrollspys-doc">
+      <%= render "shared/examples/scrollspys" %>
+    </div>
+  </div>
 </div>
 
 
 
 <div class="section white">
-
-  <form action="" class="inline-container">
-
-      <div class="input-group">
-        <input type="text" class="input-classic-style" id="label-1">
-        <label for="label-1">Label</label>
-      </div>
-
-
-      <div class="input-group">
-        <input type="text" class="input-new-style" id="label-2">
-        <label for="label-2">Label</label>
-      </div>
-
-
-    <div class="input-group">
-      <input type="text" class="input-old-style" id="label-3">
-      <label for="label-3">Label</label>
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "shared/svg_icons/chevron_right" %>
+      <h3 class="text-shade-1">Carousels</h3>
     </div>
+  </div>
 
-    <div class="input-group">
-      <input type="text" class="input-hippie-style" id="label-4">
-      <label for="label-4">Label</label>
+  <div class="tabs-links start" data-target="carousels-tabs">
+    <div class="tab-trigger active" data-target="carousels-examples">Examples</div>
+    <div class="tab-trigger" data-target="carousels-code">Code</div>
+    <div class="tab-trigger" data-target="carousels-doc">Documentation</div>
+  </div>
+
+  <div class="tabs-container" id="carousels-tabs">
+    <div class="tab-content active" id="carousels-examples">
+      <%= render "shared/examples/carousels" %>
     </div>
-
-    <input type="submit" value="submit" class="btn-primary">
-  </form>
-
-</div>
-
-
-<div class="section white">
-
-  <form action="" class="inline-container">
-    <div class="input-group group-inline">
-      <input type="text" class="input-classic-style" id="label-1">
-      <label for="label-1">Label</label>
+    <div class="tab-content" id="carousels-code">
+      <%= render "shared/code/carousels" %>
     </div>
-
-
-    <div class="input-group group-inline">
-      <input type="text" class="input-new-style" id="label-2">
-      <label for="label-2">Label</label>
+    <div class="tab-content" id="carousels-doc">
+      <%= render "shared/examples/carousels" %>
     </div>
-
-
-    <div class="input-group group-inline">
-      <input type="text" class="input-old-style" id="label-3">
-      <label for="label-3">Label design</label>
-    </div>
-
-
-    <div class="input-group group-inline">
-      <input type="text" class="input-hippie-style" id="label-4">
-      <label for="label-4">Label</label>
-    </div>
-
-    <input type="submit" value="submit" class="btn-info">
-  </form>
-
+  </div>
 </div>
 
 
 
-<div class="section white">
-
-  <div class="header">
-    <h2 class="text-shade-1">Scrollspy</h2>
-  </div>
-
-  <div class="sub-header">
-    <div class="text-shade-2">With tabs</div>
-  </div>
-
-  <div class="scrollspy-listener-container">
-
-    <div class="item">
-      <div class="scrollspy-listener" data-target="scroll-target-1">
-        <div>Story 1</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="scrollspy-listener" data-target="scroll-target-2">
-        <div>Story 2</div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="scrollspy-listener" data-target="scroll-target-3">
-        <div>Story 3</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="scrollspy-container-example">
-
-    <div class="scroll-cont-item" id="scroll-target-1">
-      <div class="scroll-card">
-        <h3>Story one</h3>
-      </div>
-    </div>
-
-    <div class="scroll-cont-item" id="scroll-target-2">
-      <div class="scroll-card">
-        <h3>Story two</h3>
-      </div>
-    </div>
-
-    <div class="scroll-cont-item" id="scroll-target-3">
-      <div class="scroll-card">
-        <h3>Story three</h3>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="section white">
-  <div class="header">
-    <h2>Carousels</h2>
-  </div>
-  <div class="sub-header">
-    <h4>Normal</h4>
-  </div>
-
-  <div class="carousel" style="background-image: url('http://unsplash.it/1400/900?random');" data-auto="true">
-    <div class="carousel-text"></div>
-    <div class="carousel-control">
-      <div class="prev">
-        <%= render "shared/svg_icons/chevron_left"%>
-      </div>
-      <div class="next">
-        <%= render "shared/svg_icons/chevron_right"%>
-      </div>
-    </div>
-    <div class="carousel-item" data-url="http://unsplash.it/1000/800?random" data-title="Wildlife"></div>
-    <div class="carousel-item" data-url="http://unsplash.it/1000/900?random" data-title="Lifestyle"></div>
-    <div class="carousel-item" data-url="http://unsplash.it/1200/700?random" data-title="Technology"></div>
-    <div class="carousel-item" data-url="http://unsplash.it/1000/800" data-title="Nature"></div>
-    <div class="carousel-item" data-url="http://unsplash.it/1100/800?random" data-title="Sport"></div>
-    <div class="carousel-item" data-url="http://unsplash.it/1000/600?random" data-title="Business"></div>
-  </div>
-
-</div>
 
 
 
