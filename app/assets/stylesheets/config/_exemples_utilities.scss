@@ -49,7 +49,6 @@ $after-subheader-color: $gray-shade-7;
     background-color: white;
     z-index: 5;
     border-bottom: 1px solid $gray-shade-7;
-    border-top: 1px solid $gray-shade-7;
     .navigation {
       display: flex;
       align-items: center;
@@ -213,22 +212,6 @@ pre.language-markup {
 }
 
 
-.svg-icon {
-  &.side-margins {
-    margin: 0 6px;
-  }
-  fill: $gray-shade-2;
-}
-
-.svg-icon-red {
-  &.side-margins {
-    margin: 0 6px;
-    padding-bottom: 2px;
-  }
-  fill: $red;
-}
-
-
 
 
 .navbar-example-container {
@@ -241,3 +224,52 @@ pre.language-markup {
   justify-content: space-around;
   align-items: center;
 }
+
+
+
+
+
+
+.sub-header-receiver {
+  font-weight: lighter;
+  color: $true-green;
+}
+
+
+
+
+
+.scrollspy-listener-header {
+    display: none;
+  &.active {
+    display: flex;
+  }
+  h3 {
+    font-weight: lighter;
+    color: $true-green;
+  }
+}
+
+
+
+
+
+
+.flexrow-example {
+  &-container {
+    background-color: $gray-shade-7;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-header {
+    color: $true-green;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+  }
+}
+

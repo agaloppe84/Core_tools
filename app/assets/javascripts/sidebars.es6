@@ -16,13 +16,8 @@ sidebarTriggers.forEach((sidebar) => {
       }
     });
     closeIcon.addEventListener("click", (event) => {
-      if (target.classList.contains("sidebar-right-animation")) {
-        target.classList.remove("sidebar-right-animation");
-        target.classList.add("d-hidden");
-      } else {
-        target.classList.add("sidebar-right-animation");
-        target.classList.remove("d-hidden");
-      }
+      target.classList.remove("sidebar-right-animation");
+      target.classList.add("d-hidden");
     });
   } else if (target.classList.contains("sidebar-left")) {
     sidebar.addEventListener("click", (event) => {
@@ -33,11 +28,8 @@ sidebarTriggers.forEach((sidebar) => {
       }
     });
     closeIcon.addEventListener("click", (event) => {
-      if (target.classList.contains("sidebar-left-animation")) {
-        target.classList.remove("sidebar-left-animation");
-      } else {
-        target.classList.add("sidebar-left-animation");
-      }
+      target.classList.remove("sidebar-left-animation");
+      target.classList.add("d-hidden");
     });
   }
 

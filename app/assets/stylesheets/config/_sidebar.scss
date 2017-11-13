@@ -9,7 +9,7 @@ $navbar-height: 50px;
   width: $width;
   transition: $transition;
   position: fixed;
-  z-index: 2;
+  z-index: 6;
   height: calc(100vh - #{$navbar-height});
   background-color: $background;
   display: flex;

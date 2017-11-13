@@ -1,0 +1,69 @@
+$svg-color-fill: $gray-shade-3;
+$svg-color-stroke: $gray-shade-3;
+$svg-stroke-width: 1;
+
+%rotate {
+  transform: rotate(90deg);
+}
+
+.svg-icon {
+  &.xs {
+    width: 5px;
+    height: 5px;
+    margin: 0 6px;
+    &.rotate {
+      @extend %rotate;
+    }
+  }
+  &.sm {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    &.rotate {
+      @extend %rotate;
+    }
+  }
+  &.md {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px;
+    &.rotate {
+      @extend %rotate;
+    }
+  }
+  &.lg {
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
+    &.rotate {
+      @extend %rotate;
+    }
+  }
+  &.xl {
+    width: 25px;
+    height: 25px;
+    margin: 0 6px;
+    &.rotate {
+      @extend %rotate;
+    }
+  }
+}
+
+.svg-icon-red {
+  &.side-margins {
+    margin: 0 6px;
+    padding-bottom: 2px;
+  }
+  fill: $red;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: $svg-color-fill;
+}
+
+.svg-icon circle {
+  stroke: $svg-color-stroke;
+  stroke-width: $svg-stroke-width;
+}

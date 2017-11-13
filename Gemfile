@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'babel-transpiler'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
