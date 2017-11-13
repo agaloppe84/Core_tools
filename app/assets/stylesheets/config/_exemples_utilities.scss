@@ -117,6 +117,18 @@ $after-subheader-color: $gray-shade-7;
   }
 }
 
+
+@media (max-width: 768px) {
+  pre.language-markup {
+    background-color: transparent;
+    border: 1px dashed $gray-shade-6;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-family: "Andale Mono";
+    font-size: 11px;
+  }
+}
+
 pre.language-markup {
   background-color: transparent;
   border: 1px dashed $gray-shade-6;

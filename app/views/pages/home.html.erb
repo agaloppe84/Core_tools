@@ -81,14 +81,32 @@
       <h3 class="text-shade-6">Components</h3>
       <%= render "svg/chevronright", size_class: "md", rotate: false %>
       <h3 class="text-shade-1">Grayscale</h3>
+
+      <div class="dropdown-top">
+
+        <div class="dropdown-trigger" data-target="header-drop-1">
+          <%= render "svg/pluscircle", size_class: "lg", rotate: false %>
+        </div>
+
+        <div class="dropdown-menu center" id="header-drop-1">
+          <div class="tabs-links center noheight" data-target="grayscale-tabs">
+            <div class="tab-trigger active example-active-tab" data-target="grayscale-examples">
+              <%= render "svg/example", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="grayscale-code">
+              <%= render "svg/code", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="grayscale-doc">
+              <%= render "svg/documentation", size_class: "xl", rotate: false %>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="tabs-links start" data-target="grayscale-tabs">
-    <div class="tab-trigger active" data-target="grayscale-examples">Examples</div>
-    <div class="tab-trigger" data-target="grayscale-code">Code</div>
-    <div class="tab-trigger" data-target="grayscale-doc">Documentation</div>
-  </div>
+
 
   <div class="tabs-container" id="grayscale-tabs">
     <div class="tab-content active" id="grayscale-examples">

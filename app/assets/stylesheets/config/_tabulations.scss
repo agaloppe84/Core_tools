@@ -1,6 +1,6 @@
 $tab-link-color: $gray-shade-3;
 $tab-link-hover-color: $true-green;
-$border-on-hover: true;
+$border-on-hover: false;
 
 
 .tab {
@@ -13,15 +13,8 @@ $border-on-hover: true;
       color: $tab-link-hover-color;
       font-weight: bolder;
       position: relative;
-      @if ($border-on-hover == true) {
-        &:before {
-          content: '';
-          position: absolute;
-          bottom: -7px;
-          width: 100%;
-          left: 0;
-          border-top: 2px solid $tab-link-hover-color;
-        }
+      svg path {
+        fill: $true-green;
       }
     }
   }
@@ -38,12 +31,22 @@ $border-on-hover: true;
 
 
 .tabs-links {
+  &.column {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+  }
   height: 60px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   &.center {
-    justify-content: center;
+    justify-content: space-between;
+    &.noheight {
+      height: auto;
+    }
   }
   &.start {
     justify-content: flex-start;
@@ -56,3 +59,10 @@ $border-on-hover: true;
   padding: 25px;
   border: 1px dashed $gray-shade-7;
 }
+
+
+.example-active-tab {
+  margin: 5px 0;
+}
+
+

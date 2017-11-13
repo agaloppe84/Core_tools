@@ -1,9 +1,9 @@
-$dropdown-carret-size: 6px;
+$dropdown-carret-size: 8px;
 $dropdown-bottom-gap: $dropdown-carret-size * 2;
 $dropdown-border-radius: 3px;
-$dropdown-background: $gray-shade-7;
-$dropdown-padding: 20px;
-$dropdown-menu-width: 180px;
+$dropdown-background: $gray;
+$dropdown-padding: 14px;
+$dropdown-menu-width: 150px;
 $center-algo: $dropdown-menu-width + ($dropdown-padding * 2);
 $position-to-center: -#{$center-algo / 2};
 
@@ -54,8 +54,8 @@ $position-to-center: -#{$center-algo / 2};
   justify-content: flex-start;
   font-weight: bolder;
   font-size: 15px;
-  height: 25px;
-  color: $gray-shade-1;
+  color: $gray-shade-5;
+  margin-bottom: 10px;
 }
 
 %dropdown-item {
@@ -99,6 +99,9 @@ $position-to-center: -#{$center-algo / 2};
       font-weight: bolder;
       color: $gray-shade-1;
       display: inline-block;
+      .icon.active path {
+        fill: $true-green;
+      }
     }
   }
   &-bottom {

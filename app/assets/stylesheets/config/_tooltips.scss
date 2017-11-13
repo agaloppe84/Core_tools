@@ -23,7 +23,6 @@ $tooltip-height: 30px;
   border-width: $tooltip-carret-size;
   margin-left: -$tooltip-carret-size;
   opacity: 0;
-  @extend %transition;
 }
 %carret-bottom {
   bottom: 100%;
@@ -39,7 +38,6 @@ $tooltip-height: 30px;
   border-width: $tooltip-carret-size;
   margin-left: -$tooltip-carret-size;
   opacity: 0;
-  @extend %transition;
 }
 %carret-left {
   bottom: 3px;
