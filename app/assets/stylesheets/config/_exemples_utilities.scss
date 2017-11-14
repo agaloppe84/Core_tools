@@ -48,7 +48,6 @@ $after-subheader-color: $gray-shade-7;
     align-items: center;
     background-color: white;
     z-index: 5;
-    border-bottom: 1px solid $gray-shade-7;
     .navigation {
       display: flex;
       align-items: center;
@@ -257,8 +256,8 @@ pre.language-markup {
     display: flex;
   }
   h3 {
-    font-weight: lighter;
-    color: $true-green;
+    font-weight: bolder;
+    color: $gray-shade-5;
   }
 }
 
@@ -270,7 +269,6 @@ pre.language-markup {
 .flexrow-example {
   &-container {
     background-color: $gray-shade-7;
-    padding: 30px;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
@@ -278,10 +276,31 @@ pre.language-markup {
     flex-direction: column;
   }
   &-header {
-    color: $true-green;
-    font-size: 18px;
-    font-weight: lighter;
+    color: $gray-shade-7;
+    background-color: $gray;
+    font-size: 14px;
+    font-weight: bolder;
     margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 30px;
+    position: sticky;
+    top: 116px;
   }
 }
 
+.example-description {
+  padding: 30px;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: $gray-shade-2;
+  line-height: 1.5;
+  box-sizing: border-box;
+  .code-in-view {
+    font-weight: bolder;
+    color: $gray-shade-1;
+    font-family: Helvetica;
+    letter-spacing: -0.5px;
+    padding: 3px 4px;
+  }
+}
