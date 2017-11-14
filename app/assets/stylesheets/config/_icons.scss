@@ -27,6 +27,7 @@ $svg-stroke-width: 1;
     width: 15px;
     height: 15px;
     margin: 0 6px;
+    padding-top: 3px;
     &.rotate {
       @extend %rotate;
     }
