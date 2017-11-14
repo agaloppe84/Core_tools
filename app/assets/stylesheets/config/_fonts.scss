@@ -60,3 +60,35 @@ $headers-font: 'Helvetica Neue';
 $paragraphs-font: 'Helvetica Neue';
 $links-font: 'Helvetica Neue';
 
+$font-weights: ("1": 100, "2": 300, "3": 500, "4": normal, "5": bold);
+
+
+@each $number, $weigth in $font-weights {
+  .text-weight-#{$number} {
+      font-weight: $weigth;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

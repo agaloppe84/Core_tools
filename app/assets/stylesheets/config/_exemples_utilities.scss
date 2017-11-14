@@ -295,6 +295,7 @@ pre.language-markup {
   padding-bottom: 30px;
   font-family: "Helvetica Neue";
   font-size: 16px;
+  width: 100%;
   color: $gray-shade-2;
   line-height: 1.5;
   box-sizing: border-box;
@@ -351,6 +352,9 @@ pre.language-markup {
   .separator {
     margin: 0 5px;
   }
+  .separator-big {
+     margin: 0 15px;
+  }
 }
 
 
@@ -364,3 +368,39 @@ pre.language-markup {
     margin: 0 5px;
   }
 }
+
+
+
+
+
+.big-size-text {
+  font-size: 26px;
+}
+
+
+.column-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

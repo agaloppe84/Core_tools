@@ -1,5 +1,6 @@
 // Width breakpoints
 $screen-breakpoints: ("xs": "0px", "sm": "768px", "md": "900px", "lg": "1200px");
+$screen-breakpoints-max: ("xs": "768px", "sm": "900px", "md": "1200px", "lg": "1600px");
 
 body {
   margin: 0;
@@ -91,7 +92,7 @@ a {
   visibility: visible;
 }
 .d-hidden {
-  display: none;
+  display: none !important;
 }
 .d-inline {
   display: inline-block;
@@ -102,10 +103,18 @@ a {
 .d-flex {
   display: flex !important;
 }
-@each $width, $pixels in $screen-breakpoints {
+@each $width, $pixels in $screen-breakpoints-max {
   @media (max-width: $pixels) {
     .d-hidden-#{$width} {
-      display: none;
+      display: none !important;
+    }
+  }
+}
+
+@each $width, $pixels in $screen-breakpoints-max {
+  @media (max-width: $pixels) {
+    .d-visible-#{$width} {
+      display: block !important;
     }
   }
 }
@@ -152,8 +161,4 @@ a {
 
 
 
-@media (max-width: 768px) {
-  .d-hidden-xs {
-    display: none;
-  }
-}
+
