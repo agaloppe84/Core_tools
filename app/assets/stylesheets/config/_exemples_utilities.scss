@@ -293,22 +293,22 @@ pre.language-markup {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
-  font-family: Helvetica;
-  font-size: 15px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
   color: $gray-shade-2;
   line-height: 1.5;
   box-sizing: border-box;
   .code-in-view {
     font-weight: bolder;
     color: $red;
-    font-family: Helvetica;
+    font-family: "Helvetica Neue";
     letter-spacing: -0.5px;
     padding: 3px 4px;
   }
   .enjoy-in-view {
     font-weight: bolder;
     color: $yellow;
-    font-family: Helvetica;
+    font-family: "Helvetica Neue";
     letter-spacing: -0.5px;
     padding: 3px 4px;
   }
@@ -326,7 +326,7 @@ pre.language-markup {
   padding: 20px;
   align-items: center;
   .title {
-    font-family: Helvetica;
+    font-family: "Helvetica Neue";
     font-size: 14px;
     color: $gray-shade-2;
     font-weight: bolder;

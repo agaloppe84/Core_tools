@@ -1,8 +1,62 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css');
 
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: font-url('HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        font-url('HelveticaNeue-Bold.woff2') format('woff2'),
+        font-url('HelveticaNeue-Bold.woff') format('woff'),
+        font-url('HelveticaNeue-Bold.ttf') format('truetype'),
+        font-url('HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
-$body-font: Helvetica;
-$headers-font: Helvetica;
-$paragraphs-font: Helvetica;
-$links-font: Helvetica;
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: font-url('HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+        font-url('HelveticaNeue.woff2') format('woff2'),
+        font-url('HelveticaNeue.woff') format('woff'),
+        font-url('HelveticaNeue.ttf') format('truetype'),
+        font-url('HelveticaNeue.svg#HelveticaNeue') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: font-url('HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+        font-url('HelveticaNeue-Light.woff2') format('woff2'),
+        font-url('HelveticaNeue-Light.woff') format('woff'),
+        font-url('HelveticaNeue-Light.ttf') format('truetype'),
+        font-url('HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: font-url('HelveticaNeue-UltraLight.eot?#iefix') format('embedded-opentype'),
+        font-url('HelveticaNeue-UltraLight.woff2') format('woff2'),
+        font-url('HelveticaNeue-UltraLight.woff') format('woff'),
+        font-url('HelveticaNeue-UltraLight.ttf') format('truetype'),
+        font-url('HelveticaNeue-UltraLight.svg#HelveticaNeue-UltraLight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: font-url('HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        font-url('HelveticaNeue-Medium.woff2') format('woff2'),
+        font-url('HelveticaNeue-Medium.woff') format('woff'),
+        font-url('HelveticaNeue-Medium.ttf') format('truetype'),
+        font-url('HelveticaNeue-Medium.svg#HelveticaNeue-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+$body-font: 'Helvetica Neue';
+$headers-font: 'Helvetica Neue';
+$paragraphs-font: 'Helvetica Neue';
+$links-font: 'Helvetica Neue';
 
