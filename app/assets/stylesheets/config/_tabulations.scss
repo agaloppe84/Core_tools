@@ -7,7 +7,6 @@ $border-on-hover: false;
   &-trigger {
     color: $tab-link-color;
     font-weight: bolder;
-    margin: 0 10px;
     font-size: 14px;
     &.active {
       color: $tab-link-hover-color;
@@ -20,6 +19,8 @@ $border-on-hover: false;
   }
   &-content {
     display: none;
+    width: 100%;
+    box-sizing: border-box;
     &.active {
       display: block;
     }
@@ -31,6 +32,9 @@ $border-on-hover: false;
 
 
 .tabs-links {
+  .separator {
+    margin: 0 12px;
+  }
   &.column {
     box-sizing: border-box;
     display: flex;
@@ -38,26 +42,30 @@ $border-on-hover: false;
     flex-direction: column;
     height: auto;
   }
-  height: 60px;
+  height: 50px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   &.center {
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
     &.noheight {
       height: auto;
+      justify-content: space-between;
+      border: none;
     }
   }
   &.start {
     justify-content: flex-start;
-    padding-left: 20px;
+    width: 100%;
   }
 }
 
 
 .tab-content-example {
   padding: 25px;
-  border: 1px dashed $gray-shade-7;
+  background-color: $gray-shade-7;
+  border-radius: 3px;
 }
 
 

@@ -29,8 +29,8 @@ $gray-shade-7: lighten($gray, 70%);
 
 @for $i from 1 through 7 {
   .circle-gray-#{$i} {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: lighten($gray, $i * 10);
   }
@@ -38,12 +38,69 @@ $gray-shade-7: lighten($gray, 70%);
 
 @for $i from 1 through 7 {
   .circle-red-#{$i} {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: lighten($red, $i * 10);
+    background-color: lighten($red, $i * 5);
   }
 }
+
+@for $i from 1 through 7 {
+  .circle-green-#{$i} {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lighten($true-green, $i * 5);
+  }
+}
+
+@for $i from 1 through 7 {
+  .circle-blue-#{$i} {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lighten($blue, $i * 5);
+  }
+}
+
+@for $i from 1 through 7 {
+  .circle-orange-#{$i} {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lighten($orange, $i * 5);
+  }
+}
+
+@for $i from 1 through 7 {
+  .circle-yellow-#{$i} {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lighten($yellow, $i * 5);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @for $i from 1 through 7 {
   .text-shade-#{$i} {

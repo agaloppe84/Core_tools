@@ -268,9 +268,9 @@ pre.language-markup {
 
 .flexrow-example {
   &-container {
-    background-color: $gray-shade-7;
     box-sizing: border-box;
     display: flex;
+    padding-bottom: 50px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
@@ -280,7 +280,7 @@ pre.language-markup {
     background-color: $gray;
     font-size: 14px;
     font-weight: bolder;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
     box-sizing: border-box;
     padding: 7px 30px;
@@ -290,7 +290,9 @@ pre.language-markup {
 }
 
 .example-description {
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   font-family: Helvetica;
   font-size: 15px;
   color: $gray-shade-2;
@@ -298,9 +300,67 @@ pre.language-markup {
   box-sizing: border-box;
   .code-in-view {
     font-weight: bolder;
-    color: $gray-shade-1;
+    color: $red;
     font-family: Helvetica;
     letter-spacing: -0.5px;
     padding: 3px 4px;
+  }
+  .enjoy-in-view {
+    font-weight: bolder;
+    color: $yellow;
+    font-family: Helvetica;
+    letter-spacing: -0.5px;
+    padding: 3px 4px;
+  }
+}
+
+.example-card {
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  border: 2px dashed $gray-shade-5;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  .title {
+    font-family: Helvetica;
+    font-size: 14px;
+    color: $gray-shade-2;
+    font-weight: bolder;
+  }
+}
+
+
+
+.example-inhead {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+
+.example-flexrow-container {
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  .separator {
+    margin: 0 5px;
+  }
+}
+
+
+.example-flexrow-container-nomargin {
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .separator {
+    margin: 0 5px;
   }
 }

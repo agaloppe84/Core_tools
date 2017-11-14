@@ -26,29 +26,6 @@
       <h3 class="text-shade-6">Components</h3>
       <%= render "svg/chevronright", size_class: "md", rotate: false %>
       <h3 class="text-shade-1">Buttons</h3>
-      <%= render "svg/chevronright", size_class: "md", rotate: false %>
-
-
-      <div class="item">
-        <div class="scrollspy-listener-header" data-target="scroll-target-20">
-          <h3>Classic</h3>
-        </div>
-      </div>
-      <div class="item">
-        <div class="scrollspy-listener-header" data-target="scroll-target-21">
-          <h3>Fixed size</h3>
-        </div>
-      </div>
-      <div class="item">
-        <div class="scrollspy-listener-header" data-target="scroll-target-22">
-          <h3>Bordered</h3>
-        </div>
-      </div>
-      <div class="item">
-        <div class="scrollspy-listener-header" data-target="scroll-target-23">
-          <h3>Fullsize</h3>
-        </div>
-      </div>
 
       <div class="dropdown-top">
 
@@ -143,14 +120,31 @@
       <h3 class="text-shade-6">Components</h3>
       <%= render "svg/chevronright", size_class: "md", rotate: false %>
       <h3 class="text-shade-1">Sidebars</h3>
+
+      <div class="dropdown-top">
+
+        <div class="dropdown-trigger" data-target="header-drop-3">
+          <%= render "svg/pluscircle", size_class: "lg", rotate: false %>
+        </div>
+
+        <div class="dropdown-menu right" id="header-drop-3">
+          <div class="tabs-links center noheight" data-target="sidebars-tabs">
+            <div class="tab-trigger active example-active-tab" data-target="sidebars-examples">
+              <%= render "svg/example", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="sidebars-code">
+              <%= render "svg/code", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="sidebars-doc">
+              <%= render "svg/documentation", size_class: "xl", rotate: false %>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="tabs-links start" data-target="sidebars-tabs">
-    <div class="tab-trigger active" data-target="sidebars-examples">Examples</div>
-    <div class="tab-trigger" data-target="sidebars-code">Code</div>
-    <div class="tab-trigger" data-target="sidebars-doc">Documentation</div>
-  </div>
 
   <div class="tabs-container" id="sidebars-tabs">
     <div class="tab-content active" id="sidebars-examples">
@@ -160,7 +154,7 @@
       <%= render "shared/code/sidebars" %>
     </div>
     <div class="tab-content" id="sidebars-doc">
-      <%= render "shared/examples/sidebars" %>
+      <%= render "shared/code/sidebars" %>
     </div>
   </div>
 </div>
@@ -172,14 +166,31 @@
       <h3 class="text-shade-6">Components</h3>
       <%= render "svg/chevronright", size_class: "md", rotate: false %>
       <h3 class="text-shade-1">Tabulations</h3>
+
+      <div class="dropdown-top">
+
+        <div class="dropdown-trigger" data-target="header-drop-4">
+          <%= render "svg/pluscircle", size_class: "lg", rotate: false %>
+        </div>
+
+        <div class="dropdown-menu right" id="header-drop-4">
+          <div class="tabs-links center noheight" data-target="tabulations-tabs">
+            <div class="tab-trigger active example-active-tab" data-target="tabulations-examples">
+              <%= render "svg/example", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="tabulations-code">
+              <%= render "svg/code", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="tabulations-doc">
+              <%= render "svg/documentation", size_class: "xl", rotate: false %>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="tabs-links start" data-target="tabulations-tabs">
-    <div class="tab-trigger active" data-target="tabulations-examples">Examples</div>
-    <div class="tab-trigger" data-target="tabulations-code">Code</div>
-    <div class="tab-trigger" data-target="tabulations-doc">Documentation</div>
-  </div>
 
   <div class="tabs-container" id="tabulations-tabs">
     <div class="tab-content active" id="tabulations-examples">
@@ -189,7 +200,7 @@
       <%= render "shared/code/tabulations" %>
     </div>
     <div class="tab-content" id="tabulations-doc">
-      <%= render "shared/examples/tabulations" %>
+      <%= render "shared/code/tabulations" %>
     </div>
   </div>
 </div>
