@@ -311,7 +311,7 @@ pre.language-markup {
     color: $yellow;
     font-family: "Helvetica Neue";
     letter-spacing: -0.5px;
-    padding: 3px 4px;
+    padding: 3px 0;
   }
 }
 
@@ -383,6 +383,9 @@ pre.language-markup {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  h4 {
+    color: $gray-shade-6;
+  }
 }
 
 

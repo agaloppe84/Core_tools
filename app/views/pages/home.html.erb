@@ -114,6 +114,66 @@
 </div>
 
 
+
+
+
+
+
+
+<div class="section white">
+  <div class="sticky-header p-sti">
+    <div class="navigation">
+      <h3 class="text-shade-6">Components</h3>
+      <%= render "svg/chevronright", size_class: "md", rotate: false %>
+      <h3 class="text-shade-1">Responsive tools</h3>
+
+      <div class="dropdown-top">
+
+        <div class="dropdown-trigger" data-target="header-drop-20">
+          <%= render "svg/pluscircle", size_class: "lg", rotate: false %>
+        </div>
+
+        <div class="dropdown-menu right" id="header-drop-20">
+          <div class="tabs-links center noheight" data-target="responsive-tools-tabs">
+            <div class="tab-trigger active example-active-tab" data-target="responsive-tools-examples">
+              <%= render "svg/example", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="responsive-tools-code">
+              <%= render "svg/code", size_class: "xl", rotate: false %>
+            </div>
+            <div class="tab-trigger example-active-tab" data-target="responsive-tools-doc">
+              <%= render "svg/documentation", size_class: "xl", rotate: false %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tabs-container" id="responsive-tools-tabs">
+    <div class="tab-content active" id="responsive-tools-examples">
+      <%= render "shared/examples/responsive_tools" %>
+    </div>
+    <div class="tab-content" id="responsive-tools-code">
+      <%= render "shared/code/responsive_tools" %>
+    </div>
+    <div class="tab-content" id="responsive-tools-doc">
+      <%= render "shared/examples/responsive_tools" %>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
 <div class="section white">
   <div class="sticky-header p-sti">
     <div class="navigation">
