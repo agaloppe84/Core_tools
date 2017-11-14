@@ -28,6 +28,51 @@ a {
   font-family: $links-font;
 }
 
+mark {
+  font-family: "Roboto Mono";
+  font-size: 15px;
+  background-color: transparent;
+  &.light {
+    font-weight: 300;
+  }
+  &.medium {
+    font-weight: 400;
+    color: $true-green;
+  }
+  &.bold {
+    font-weight: 700;
+    color: $red;
+  }
+  &.number {
+    font-weight: 400;
+    color: $true-green;
+  }
+  &.string {
+    font-weight: 400;
+    color: $gray;
+    margin: 0 4px;
+  }
+  &.percent {
+    color: $orange;
+    font-weight: 700;
+  }
+  &.calc {
+    color: $blue;
+    font-weight: 400;
+  }
+  &.pixels {
+    color: $yellow;
+    font-weight: 700;
+  }
+  &.sign {
+    color: $gray;
+    font-weight: 700;
+    margin: 0 4px;
+  }
+}
+
+
+
 
 @media (max-width: 768px) {
   h3 {
