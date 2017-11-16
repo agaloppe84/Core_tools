@@ -11,9 +11,6 @@ const isInViewport = (element) => {
 }
 
 
-
-
-
 const fadeAnimation = (selector) => {
   let listeners = document.querySelectorAll(selector);
   listeners.forEach((listener) => {
@@ -30,31 +27,11 @@ const fadeAnimation = (selector) => {
   });
 }
 
-const dynText = (selector) => {
-  let listeners = document.querySelectorAll(selector);
-  listeners.forEach((listener) => {
-    let target = document.getElementById(listener.dataset.target);
-    if (isInViewport(target)) {
-      listener.classList.add("active");
-      target.classList.add("fadein");
-      target.classList.remove("fadeout");
-    } else {
-      let dynamicTextContainer = document.querySelector(".dynamic-header-subcategory");
-      listener.classList.remove("active");
-      target.classList.remove("fadein");
-      target.classList.add("fadeout");
-    }
+
+
+window.addEventListener("scroll", (event) => {
+  window.requestAnimationFrame(function() {
+    fadeAnimation('.scrollspy-listener');
   });
-}
-
-
-
-
-
-window.addEventListener("scroll", (event) => {
-  fadeAnimation('.scrollspy-listener');
 });
 
-window.addEventListener("scroll", (event) => {
-  dynText('.scrollspy-listener-header');
-});

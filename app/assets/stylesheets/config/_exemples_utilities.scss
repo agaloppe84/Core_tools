@@ -25,6 +25,7 @@ $after-subheader-color: $gray-shade-7;
   &.white {
     background-color: white;
     border-top: 1px solid $gray-shade-7;
+    padding: 0 15%;
   }
   &.light {
     background-color: $gray-shade-7;
@@ -54,6 +55,32 @@ $after-subheader-color: $gray-shade-7;
       align-items: center;
       justify-content: flex-start;
       padding-left: 10px;
+      position: relative;
+      .added-on {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        width: 120px;
+        top: 0;
+        left: -130px;
+        .title {
+          font-size: 12px;
+          color: $red;
+          font-weight: bolder;
+          opacity: 0.7;
+          line-height: 15px;
+        }
+        .content {
+          font-size: 12px;
+          color: $red;
+          opacity: 0.7;
+          line-height: 15px;
+          padding-top: 3px;
+          margin-left: 4px;
+        }
+      }
     }
   }
   .sub-header {
@@ -75,6 +102,19 @@ $after-subheader-color: $gray-shade-7;
     }
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .section {
+    &.white {
+      padding: 0;
+    }
+  }
+}
+
+
+
 
 
 
