@@ -1,5 +1,7 @@
 $tree-falling-line-color: $gray-shade-7;
 $tree-falling-line-width: 5px;
+$tree-falling-item-size: 30px;
+$tree-falling-item-height: 30px;
 
 
 
@@ -42,16 +44,16 @@ $tree-falling-line-width: 5px;
           font-size: 14px;
           font-weight: bolder;
           color: $gray-shade-5;
-          width: 200%;
+          width: 300%;
           height: 25px;
           bottom: -30px;
-          left: -50%;
+          left: -100%;
           display: flex;
           align-items: center;
           justify-content: center;
         }
-        width: 50px;
-        height: 50px;
+        width: $tree-falling-item-size;
+        height: $tree-falling-item-size;
         box-sizing: border-box;
         border: 1px solid $tree-falling-line-color;
         margin-top: 30px;
@@ -89,16 +91,16 @@ $tree-falling-line-width: 5px;
           font-size: 14px;
           font-weight: bolder;
           color: $gray-shade-5;
-          width: 200%;
+          width: 300%;
           height: 25px;
           bottom: -30px;
-          left: -50%;
+          left: -100%;
           display: flex;
           align-items: center;
           justify-content: center;
         }
-        width: 50px;
-        height: 50px;
+        width: $tree-falling-item-size;
+        height: $tree-falling-item-size;
         border: 1px solid $tree-falling-line-color;
         margin-top: 30px;
         position: relative;
@@ -130,16 +132,16 @@ $tree-falling-line-width: 5px;
           font-size: 14px;
           font-weight: bolder;
           color: $gray-shade-5;
-          width: 200%;
+          width: 300%;
           height: 25px;
           bottom: -30px;
-          left: -50%;
+          left: -100%;
           display: flex;
           align-items: center;
           justify-content: center;
         }
-        width: 50px;
-        height: 50px;
+        width: $tree-falling-item-size;
+        height: $tree-falling-item-size;
         border-radius: 50%;
         border: 1px solid $tree-falling-line-color;
         margin-top: 30px;
