@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'sprockets', '4.0.0.beta5'
 gem 'babel-transpiler'
 gem 'devise'
 gem 'figaro'

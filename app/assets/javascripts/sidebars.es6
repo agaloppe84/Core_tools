@@ -9,15 +9,12 @@ sidebarTriggers.forEach((sidebar) => {
     sidebar.addEventListener("click", (event) => {
       if (target.classList.contains("sidebar-right-animation")) {
         target.classList.remove("sidebar-right-animation");
-        target.classList.add("d-hidden");
       } else {
         target.classList.add("sidebar-right-animation");
-        target.classList.remove("d-hidden");
       }
     });
     closeIcon.addEventListener("click", (event) => {
       target.classList.remove("sidebar-right-animation");
-      target.classList.add("d-hidden");
     });
   } else if (target.classList.contains("sidebar-left")) {
     sidebar.addEventListener("click", (event) => {
@@ -29,7 +26,6 @@ sidebarTriggers.forEach((sidebar) => {
     });
     closeIcon.addEventListener("click", (event) => {
       target.classList.remove("sidebar-left-animation");
-      target.classList.add("d-hidden");
     });
   }
 
