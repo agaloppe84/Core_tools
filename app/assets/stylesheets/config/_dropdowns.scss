@@ -8,6 +8,21 @@ $dropdown-menu-width: 150px;
 $center-algo: $dropdown-menu-width + ($dropdown-padding * 2);
 $position-to-center: -#{$center-algo / 2};
 
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+
+
+
 %carret-top {
   top: 100%;
   left: 50%;
@@ -41,26 +56,26 @@ $position-to-center: -#{$center-algo / 2};
 
 %dropdown-menu {
   width: $dropdown-menu-width;
-  padding-bottom: 5px;
   position: absolute;
   border-radius: $dropdown-border-radius;
   background-color: $dropdown-background;
   opacity: 0;
   z-index: 1;
+  display: none;
   border: 1px solid $gray-shade-7;
   transition: 0.3s ease;
-  pointer-events: none;
 }
 
 %dropdown-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 15px;
-  color: $gray-shade-1;
+  color: $gray-shade-2;
   padding: 10px 16px;
   border-bottom: 1px solid $gray-shade-7;
+  transition: 0.3s ease;
 }
 
 %dropdown-item {
@@ -68,8 +83,10 @@ $position-to-center: -#{$center-algo / 2};
   align-items: center;
   font-weight: 400;
   font-size: 15px;
-  color: $gray-shade-1;
+  color: $gray-shade-2;
   padding: 10px 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -80,18 +97,24 @@ $position-to-center: -#{$center-algo / 2};
     justify-content: center;
     height: 100%;
     .dropdown-menu {
+      @extend %dropdown-menu;
+      transition: 0.3s ease;
+      top: calc(100% + #{$dropdown-bottom-gap});
+      left: 0;
       &-header {
         @extend %dropdown-header;
       }
       &-item {
         @extend %dropdown-item;
+        &:hover {
+          background-color: $gray-shade-7;
+        }
       }
       &.active {
+        transition: 0.3s ease;
+        display: block;
         opacity: 1;
       }
-      @extend %dropdown-menu;
-      top: calc(100% + #{$dropdown-bottom-gap});
-      left: 0;
       &.center {
         left: calc(#{$position-to-center} + 50%);
       }
@@ -104,15 +127,19 @@ $position-to-center: -#{$center-algo / 2};
       @extend %carret-top;
     }
     .dropdown-trigger {
-      color: $gray-shade-1;
-      font-size: 17px;
+      color: $gray-shade-4;
+      font-size: 16px;
       display: flex;
       height: 100%;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      transition: 0.3s ease;
       &.active {
         color: $dropdown-active-color;
+      }
+      &:hover {
+        color: $gray-shade-1;
       }
     }
   }
@@ -130,6 +157,8 @@ $position-to-center: -#{$center-algo / 2};
         @extend %dropdown-item;
       }
       &.active {
+        transition: 0.3s ease;
+        display: block;
         opacity: 1;
       }
       @extend %dropdown-menu;
@@ -144,15 +173,19 @@ $position-to-center: -#{$center-algo / 2};
       }
     }
     .dropdown-trigger {
-      color: $gray-shade-1;
-      font-size: 17px;
+      color: $gray-shade-4;
+      font-size: 16px;
       display: flex;
       height: 100%;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      transition: 0.3s ease;
       &.active {
         color: $dropdown-active-color;
+      }
+      &:hover {
+        color: $gray-shade-1;
       }
     }
     &:after {
