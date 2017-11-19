@@ -268,17 +268,51 @@
 <div class="section white">
   <div class="sticky-header p-sti">
     <div class="navigation">
-      <h3 class="text-shade-6">Components</h3>
-      <%= render "svg/chevronright", size_class: "md", rotate: false %>
-      <h3 class="text-shade-1">Dropdowns</h3>
+      <div>Dropdowns</div>
+      <div class="separator"></div>
+      <div class="tag">
+        <div class="tag-container">
+          <div class="title">sass</div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="tag">
+        <div class="tag-container">
+          <div class="title blue">variables</div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="tag">
+        <div class="tag-container">
+          <div class="title red">javascript</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="tabs-links start" data-target="dropdowns-tabs">
-    <div class="tab-trigger active" data-target="dropdowns-examples">Examples</div>
-    <div class="tab-trigger" data-target="dropdowns-code">Code</div>
-    <div class="tab-trigger" data-target="dropdowns-doc">Documentation</div>
-  </div>
+
+    <div class="tabs-links start" data-target="dropdowns-tabs">
+      <div class="tab-trigger active" data-target="dropdowns-examples">Examples</div>
+      <div class="tab-trigger" data-target="dropdowns-code">Code</div>
+
+      <div class="tab-separator"></div>
+
+      <div class="dropdown-top">
+        <div class="dropdown-trigger" data-target="tab-drop-20">
+          <div>Tools</div>
+          <%= render "svg/chevrondown", size_class: "md", rotate: false %>
+        </div>
+        <div class="dropdown-menu right" id="tab-drop-20">
+          <div class="dropdown-menu-header">Dropdown</div>
+          <div class="dropdown-menu-item">Home</div>
+          <div class="dropdown-menu-item">Dashboard</div>
+          <div class="dropdown-menu-item">Inbox</div>
+          <div class="dropdown-menu-item">Logout</div>
+        </div>
+      </div>
+
+    </div>
+
 
   <div class="tabs-container" id="dropdowns-tabs">
     <div class="tab-content active" id="dropdowns-examples">
@@ -286,9 +320,6 @@
     </div>
     <div class="tab-content" id="dropdowns-code">
       <%= render "shared/code/dropdowns" %>
-    </div>
-    <div class="tab-content" id="dropdowns-doc">
-      <%= render "shared/examples/dropdowns" %>
     </div>
   </div>
 </div>

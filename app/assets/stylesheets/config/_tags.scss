@@ -1,0 +1,74 @@
+$tag-border-radius: 3px;
+
+
+
+.tag {
+  overflow: hidden;
+  border-radius: $tag-border-radius;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  &-dotted {
+    position: relative;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 12px;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: $red;
+      right: 95%;
+      top: calc(50% - 4px);
+    }
+    .title {
+      padding: 4px 4px;
+      color: white;
+      &.blue {
+        color: $blue;
+        border: 1px solid $blue;
+      }
+      &.red {
+        color: $red;
+      }
+    }
+  }
+  .title {
+    padding: 5px 5px;
+    background-color: $gray-shade-1;
+    border: 1px solid $gray-shade-1;
+    color: white;
+    line-height: 0.7;
+    &.blue {
+      background-color: $blue;
+      border: 1px solid $blue;
+    }
+    &.red {
+      background-color: $red;
+      border: 1px solid $red;
+    }
+  }
+  .content {
+    padding: 5px 5px;
+    background-color: white;
+    border: 1px solid $gray-shade-1;
+    border-top-right-radius: $tag-border-radius;
+    border-bottom-right-radius: $tag-border-radius;
+    &.red {
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+}
+
+.tag-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

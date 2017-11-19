@@ -1,17 +1,46 @@
-$tab-link-color: $gray-shade-3;
-$tab-link-hover-color: $true-green;
+$tab-link-color: $gray-shade-1;
+$tab-link-hover-color: $blue;
+$tab-links-container-height: 44px;
 $border-on-hover: false;
 
 
 .tab {
   &-trigger {
     color: $tab-link-color;
-    font-weight: bolder;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 0 16px;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      position: relative;
+      color: $gray-shade-4;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid $gray-shade-4;
+        left: 0;
+        top: 100%;
+        transition: 0.2s ease;
+      }
+    }
     &.active {
       color: $tab-link-hover-color;
-      font-weight: bolder;
       position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid $tab-link-hover-color;
+        left: 0;
+        top: 100%;
+        transition: 0.2s ease;
+      }
       svg path {
         fill: $true-green;
       }
@@ -33,7 +62,10 @@ $border-on-hover: false;
 
 .tabs-links {
   .separator {
-    margin: 0 12px;
+    margin: 0 0px;
+  }
+  .tab-separator {
+    margin: 0 7px;
   }
   &.column {
     box-sizing: border-box;
@@ -42,22 +74,27 @@ $border-on-hover: false;
     flex-direction: column;
     height: auto;
   }
-  height: 50px;
+  height: $tab-links-container-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   &.center {
     justify-content: center;
     width: 100%;
+    border-bottom: 1px solid $gray-shade-7;
+    margin-bottom: 20px;
     &.noheight {
       height: auto;
       justify-content: space-between;
       border: none;
+      margin-bottom: 0;
     }
   }
   &.start {
     justify-content: flex-start;
     width: 100%;
+    border-bottom: 1px solid $gray-shade-7;
+    margin-bottom: 20px;
   }
 }
 
@@ -73,4 +110,9 @@ $border-on-hover: false;
   margin: 5px 0;
 }
 
-
+@media (max-width: 768px) {
+  .tabs-links-container {
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+}

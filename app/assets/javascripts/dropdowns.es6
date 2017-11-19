@@ -11,7 +11,10 @@ topDropdowns.forEach((dropdown) => {
   trigger.addEventListener("click", (event) => {
     target.classList.toggle("active");
     dropdown.classList.toggle("active");
-    arrow.classList.toggle("active");
+    trigger.classList.toggle("active");
+    if (arrow) {
+      arrow.classList.toggle("active");
+    }
   });
 });
 
@@ -23,7 +26,10 @@ bottomDropdowns.forEach((dropdown) => {
   trigger.addEventListener("click", (event) => {
     target.classList.toggle("active");
     dropdown.classList.toggle("active");
-    arrow.classList.toggle("active");
+    trigger.classList.toggle("active");
+    if (arrow) {
+      arrow.classList.toggle("active");
+    }
   });
 });
 

@@ -1,8 +1,9 @@
-$dropdown-carret-size: 8px;
+$dropdown-carret-size: 0px;
 $dropdown-bottom-gap: $dropdown-carret-size * 2;
 $dropdown-border-radius: 3px;
-$dropdown-background: $gray-shade-7;
-$dropdown-padding: 14px;
+$dropdown-background: white;
+$dropdown-active-color: $blue;
+$dropdown-padding: 0px;
 $dropdown-menu-width: 150px;
 $center-algo: $dropdown-menu-width + ($dropdown-padding * 2);
 $position-to-center: -#{$center-algo / 2};
@@ -40,22 +41,26 @@ $position-to-center: -#{$center-algo / 2};
 
 %dropdown-menu {
   width: $dropdown-menu-width;
-  padding: $dropdown-padding;
+  padding-bottom: 5px;
   position: absolute;
   border-radius: $dropdown-border-radius;
   background-color: $dropdown-background;
   opacity: 0;
   z-index: 1;
+  border: 1px solid $gray-shade-7;
+  transition: 0.3s ease;
+  pointer-events: none;
 }
 
 %dropdown-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-weight: bolder;
+  font-weight: 400;
   font-size: 15px;
-  color: $gray-shade-5;
-  margin-bottom: 10px;
+  color: $gray-shade-1;
+  padding: 10px 16px;
+  border-bottom: 1px solid $gray-shade-7;
 }
 
 %dropdown-item {
@@ -63,14 +68,17 @@ $position-to-center: -#{$center-algo / 2};
   align-items: center;
   font-weight: 400;
   font-size: 15px;
-  height: 25px;
-  color: $gray-shade-3;
+  color: $gray-shade-1;
+  padding: 10px 16px;
 }
 
 .dropdown {
   &-top {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     .dropdown-menu {
       &-header {
         @extend %dropdown-header;
@@ -96,17 +104,24 @@ $position-to-center: -#{$center-algo / 2};
       @extend %carret-top;
     }
     .dropdown-trigger {
-      font-weight: bolder;
       color: $gray-shade-1;
-      display: inline-block;
-      .icon.active path {
-        fill: $true-green;
+      font-size: 17px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.active {
+        color: $dropdown-active-color;
       }
     }
   }
   &-bottom {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     .dropdown-menu {
       &-header {
         @extend %dropdown-header;
@@ -129,9 +144,16 @@ $position-to-center: -#{$center-algo / 2};
       }
     }
     .dropdown-trigger {
-      font-weight: bolder;
       color: $gray-shade-1;
-      display: inline-block;
+      font-size: 17px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.active {
+        color: $dropdown-active-color;
+      }
     }
     &:after {
       @extend %carret-bottom;
