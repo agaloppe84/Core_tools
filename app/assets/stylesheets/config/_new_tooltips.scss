@@ -1,0 +1,141 @@
+$tooltip-carret-size: 7px;
+$tooltip-bottom-gap: $tooltip-carret-size * 2;
+$tooltip-border-radius: 4px;
+$tooltip-background: $gray-shade-1;
+$tooltip-active-color: $gray-shade-1;
+$tooltip-padding: 0px;
+$tooltip-menu-width: 130px;
+$center-algo: $tooltip-menu-width + ($tooltip-padding * 2);
+$position-to-center: -#{$center-algo / 2};
+
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+
+
+
+%tooltip-carret-top {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+}
+%tooltip-carret-bottom {
+  bottom: calc(100% + 1px);
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: $tooltip-background;
+  border-width: $tooltip-carret-size;
+  margin-left: -$tooltip-carret-size;
+  opacity: 0;
+}
+
+%tooltip-menu {
+  width: $tooltip-menu-width;
+  position: absolute;
+  border-radius: $tooltip-border-radius;
+  background-color: $tooltip-background;
+  opacity: 0;
+  z-index: 1;
+  display: none;
+  transition: 0.3s ease;
+}
+
+%tooltip-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.95);
+  padding: 8px 10px;
+  transition: 0.3s ease;
+}
+
+.tooltip {
+  &-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .tooltip-menu {
+      &-header {
+        @extend %tooltip-header;
+      }
+      &.active {
+        transition: 0.3s ease;
+        display: block;
+        opacity: 1;
+      }
+      @extend %tooltip-menu;
+      bottom: calc(100% + #{$tooltip-bottom-gap});
+      left: 0;
+      &.center {
+        left: calc(#{$position-to-center} + 50%);
+      }
+      &.right {
+        right: 0;
+        left: inherit;
+      }
+    }
+    .tooltip-trigger {
+      color: $gray-shade-4;
+      font-size: 16px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &.active {
+        color: $tooltip-active-color;
+      }
+      &:hover {
+        color: $gray-shade-1;
+      }
+    }
+    &:after {
+      @extend %tooltip-carret-bottom;
+    }
+  }
+}
+
+.tooltip-bottom.active:after {
+  opacity: 1;
+}
+
+
+
+
+.link {
+  color: $gray-shade-1;
+  cursor: pointer;
+  font-weight: bolder;
+  text-decoration: none;
+}

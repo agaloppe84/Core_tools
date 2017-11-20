@@ -1,5 +1,6 @@
 $tab-link-color: $gray-shade-4;
-$tab-link-hover-color: $blue;
+$tab-active-line-color: transparent;
+$tab-link-hover-color: $gray-shade-2;
 $tab-links-container-height: 44px;
 $border-on-hover: false;
 
@@ -23,7 +24,7 @@ $border-on-hover: false;
         position: absolute;
         content: '';
         width: 100%;
-        border-bottom: 1px solid $gray-shade-4;
+        border-bottom: 1px solid $tab-active-line-color;
         left: 0;
         top: 100%;
         transition: 0.2s ease;
@@ -36,7 +37,7 @@ $border-on-hover: false;
         position: absolute;
         content: '';
         width: 100%;
-        border-bottom: 1px solid $tab-link-hover-color;
+        border-bottom: 1px solid $tab-active-line-color;
         left: 0;
         top: 100%;
         transition: 0.2s ease;
@@ -93,7 +94,7 @@ $border-on-hover: false;
   &.start {
     justify-content: flex-start;
     width: 100%;
-    border-bottom: 1px solid $gray-shade-7;
+    border-bottom: 1px solid transparent;
     margin-bottom: 20px;
   }
 }

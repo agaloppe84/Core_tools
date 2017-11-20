@@ -109,8 +109,70 @@ $gray-shade-7: lighten($gray, 70%);
 }
 
 @for $i from 0 through 7 {
-  .text-shade-green-#{$i} {
+  .text-green-#{$i} {
     color: lighten($true-green, $i * 10);
   }
 }
+
+
+@for $i from 0 through 7 {
+  .text-blue-#{$i} {
+    color: lighten($blue, $i * 10);
+  }
+}
+
+
+@for $i from 0 through 7 {
+  .text-red-#{$i} {
+    color: lighten($red, $i * 10);
+  }
+}
+
+
+@for $i from 0 through 7 {
+  .text-orange-#{$i} {
+    color: lighten($orange, $i * 10);
+  }
+}
+
+
+
+
+
+
+
+
+@for $i from 0 through 7 {
+  .back-green-#{$i} {
+    background-color: lighten($true-green, $i * 10);
+  }
+}
+
+
+@for $i from 0 through 7 {
+  .back-blue-#{$i} {
+    background-color: lighten($blue, $i * 10);
+  }
+}
+
+
+@for $i from 0 through 7 {
+  .back-red-#{$i} {
+    background-color: lighten($red, $i * 10);
+  }
+}
+
+
+@for $i from 0 through 7 {
+  .back-orange-#{$i} {
+    background-color: lighten($orange, $i * 10);
+  }
+}
+
+
+
+
+
+
+
 
