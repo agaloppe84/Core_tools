@@ -466,7 +466,7 @@ pre.language-markup {
 
 .bordered-tab-container {
   width: 100%;
-  padding: 15px;
+  padding: 0 15px;
   box-sizing: border-box;
   .tab-container {
     border-radius: 3px;
@@ -476,6 +476,7 @@ pre.language-markup {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 30px;
     .vertical-separator {
       margin: 20px 0;
     }
