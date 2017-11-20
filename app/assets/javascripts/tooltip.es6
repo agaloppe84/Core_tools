@@ -1,11 +1,19 @@
-let tooltips = document.querySelectorAll(".tooltip-trigger");
+let downTooltips = document.querySelectorAll(".tooltip-bottom");
 
-tooltips.forEach((tooltip) => {
-  let target = document.getElementById(tooltip.dataset.target);
-  tooltip.addEventListener("mouseover", (event) => {
-    target.classList.add("active");
-  });
-  tooltip.addEventListener("mouseout", (event) => {
-    target.classList.remove("active");
+
+
+downTooltips.forEach((tooltip) => {
+  let trigger = tooltip.querySelector(".tooltip-trigger");
+  let targetId = trigger.dataset.target;
+  let target = document.getElementById(targetId);
+  let arrow = tooltip.querySelector(".icon");
+  trigger.addEventListener("click", (event) => {
+    target.classList.toggle("active");
+    tooltip.classList.toggle("active");
+    trigger.classList.toggle("active");
+    if (arrow) {
+      arrow.classList.toggle("active");
+    }
   });
 });
+
