@@ -266,10 +266,8 @@
 
 
 <div class="section white">
-  <div class="sticky-header p-sti">
+  <div class="sticky-header">
     <div class="navigation">
-      <div class="text-shade-6">Components</div>
-      <%= render "svg/chevronright", size_class: "md", rotate: false %>
       <div class="text-blue-0">Dropdowns</div>
     </div>
   </div>
@@ -307,6 +305,69 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+<div class="section white">
+  <div class="sticky-header">
+    <div class="navigation">
+      <div class="text-blue-0">Tooltips</div>
+    </div>
+  </div>
+
+
+    <div class="tabs-links start" data-target="tooltips-tabs">
+      <div class="tab-trigger active" data-target="tooltips-examples">Examples</div>
+      <div class="tab-trigger" data-target="tooltips-code">Code</div>
+
+      <div class="tab-separator"></div>
+
+      <div class="dropdown-top">
+        <div class="dropdown-trigger" data-target="tab-drop-22">
+          <div>Tools</div>
+          <%= render "svg/chevrondown", size_class: "md", rotate: false %>
+        </div>
+        <div class="dropdown-menu right" id="tab-drop-22">
+          <div class="dropdown-menu-header">Dropdown</div>
+          <div class="dropdown-menu-item">Home</div>
+          <div class="dropdown-menu-item">Dashboard</div>
+          <div class="dropdown-menu-item">Inbox</div>
+          <div class="dropdown-menu-item">Logout</div>
+        </div>
+      </div>
+
+    </div>
+
+
+  <div class="tabs-container" id="tooltips-tabs">
+    <div class="tab-content active" id="tooltips-examples">
+      <%= render "shared/examples/tooltips" %>
+    </div>
+    <div class="tab-content" id="tooltips-code">
+      <%= render "shared/code/dropdowns" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

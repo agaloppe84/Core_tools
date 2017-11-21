@@ -106,7 +106,8 @@ $position-to-center: -#{$center-algo / 2};
     }
     .tooltip-trigger {
       color: $gray-shade-4;
-      font-size: 16px;
+      font-size: 15px;
+      font-weight: bolder;
       display: flex;
       height: 100%;
       align-items: center;
